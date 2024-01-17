@@ -41,6 +41,12 @@ class SignScreen extends StatelessWidget {
                       return const SignIn();
                     }));
                     },
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.amber[900],
+                        onPrimary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        )),
                     child: const Text(
                       'Sign in',
                       style: TextStyle(
@@ -49,12 +55,6 @@ class SignScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.amber[900],
-                        onPrimary: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        )),
                   ),
                 ),
               ],
@@ -89,6 +89,11 @@ class SignScreen extends StatelessWidget {
                       return const SignUp();
                     }));
                   },
+                  style: OutlinedButton.styleFrom(
+                      primary: Colors.purple,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      )),
                   child: const Text(
                     'Sign Up',
                     style: TextStyle(
@@ -97,12 +102,7 @@ class SignScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.purple,
                     ),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      primary: Colors.purple,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ))),
+                  )),
             ),
           ],
         ),

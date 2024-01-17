@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_volturi/sign_screen.dart';
+import 'package:project_volturi/signin.dart';
+import 'package:project_volturi/signup.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const IntroScreen(),
+      home: const SignIn(),
     );
   }
 }

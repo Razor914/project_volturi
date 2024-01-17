@@ -12,43 +12,106 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(92),
+        child: AppBar(
+          flexibleSpace: const Image(
+            image: AssetImage('images/headerLogin.jpg'),
+            fit: BoxFit.cover,
+          ),
           title: const Text(
-        'Login Account',
-      )),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextFormField(
-              decoration: const InputDecoration(
-                labelText: 'Username',
-              ),
+            'Login Account',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                labelText: 'Password',
-              ),
-              obscureText: true,
-            ),
-            MaterialButton(child: const Text('Sign In'), onPressed: () {}),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const SignUp();
-                }));
-              },
-              child: const Text(
-                'Belum Punya Akun?',
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.orange,
-                    fontFamily: 'Poppinss',
-                    fontWeight: FontWeight.normal),
-              ),
-            ),
-          ],
+          ),
+          centerTitle: true,
         ),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Sign In',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 20,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.orange,
+                ),
+              ),
+            ],
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              contentPadding: EdgeInsets.all(20.0),
+              labelText: 'Username',
+              labelStyle: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 15,
+              )
+            ),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              contentPadding: EdgeInsets.all(20.0),
+              labelText: 'Password',
+              labelStyle: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 15,
+              )
+            ),
+            obscureText: true,
+          ),
+          SizedBox(
+                  width: 280,
+                  height: 60,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const SignIn();
+                    }));
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.amber[900],
+                        onPrimary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        )),
+                    child: const Text(
+                      'Sign in',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const SignUp();
+              }));
+            },
+            child: const Text(
+              'Belum Punya Akun?',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.purple,
+                  fontFamily: 'Poppinss',
+                  fontWeight: FontWeight.normal),
+            ),
+          ),
+        ],
       ),
     );
   }
