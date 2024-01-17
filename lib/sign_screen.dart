@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_volturi/main.dart';
 import 'package:project_volturi/signin.dart';
 import 'package:project_volturi/signup.dart';
 
@@ -26,7 +25,7 @@ class SignScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 130,
             ),
             Row(
@@ -39,10 +38,10 @@ class SignScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return SignIn();
+                      return const SignIn();
                     }));
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign in',
                       style: TextStyle(
                         fontSize: 20,
@@ -60,10 +59,10 @@ class SignScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
@@ -77,7 +76,7 @@ class SignScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -87,10 +86,10 @@ class SignScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return SignUp();
+                      return const SignUp();
                     }));
                   },
-                  child: Text(
+                  child: const Text(
                     'Sign Up',
                     style: TextStyle(
                       fontFamily: 'Poppins',

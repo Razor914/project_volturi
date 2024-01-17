@@ -13,7 +13,7 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
+          title: const Text(
         'Login Account',
       )),
       body: Center(
@@ -21,21 +21,21 @@ class _SignInState extends State<SignIn> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Username',
               ),
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Password',
               ),
               obscureText: true,
             ),
-            MaterialButton(child: Text('Sign In'), onPressed: () {}),
+            MaterialButton(child: const Text('Sign In'), onPressed: () {}),
             GestureDetector(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return SignUp();
+                  return const SignUp();
                 }));
               },
               child: const Text(

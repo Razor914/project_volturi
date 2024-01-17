@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_volturi/sign_screen.dart';
-import 'package:project_volturi/signin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,7 +80,7 @@ class IntroScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return SignScreen();
+                      return const SignScreen();
                     }));
                   },
                   child: const Text(
